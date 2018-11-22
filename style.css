@@ -3,7 +3,7 @@
     width:80%;
     background: RGBA(0,0,0,0.7);
     z-index:2;
-    background-color: rgba(72, 77, 77, 0.938);
+    background-color: rgba(0, 0, 0, 0.747);
     margin-top: 2%;
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -12,12 +12,11 @@
     margin-left: 5%;
 }
 .footer{
-    border: 1px solid black;
     position: relative;
     bottom:0;
     width:100%;
     height:60px;
-    background:darkslategray;
+    background:rgb(0, 0, 0);
 }
 #carouselDiv{
     width: 100%;
@@ -37,15 +36,18 @@ body{
 #navbarContainer{
     width: 80% !important;
 }
-/*Logo*/
 .fa:hover {
     opacity: 0.7;
 }
 .fa-facebook {
-  background: darkslategray;
+  background: rgba(0, 0, 0, 0.747);
   color: white;
 }
+.fa-twitter {
+    background: rgba(0, 0, 0, 0.747);
+    color: white;
+  }
 .fa-instagram {
-    background: darkslategray;
+    background: rgba(0, 0, 0, 0.747);
     color: white;
   }
