@@ -11,6 +11,8 @@
 #navbarHeader{
     margin-left: 5%;
 }
+.boxes{
+}
 .footer{
     border: 1px solid black;
     position: relative;
@@ -21,10 +23,18 @@
 }
 #carouselDiv{
     width: 100%;
-    height: % !important;
+}
+.boxes{
+    margin-top: 1%;
+}
+.cell{
+    width: 105%; 
+    height: 400px; 
+    border: 1px solid white; 
 }
 body{
     background-color: whitesmoke;
+    overflow-x: hidden;
 }
 #navbarContainer{
     width: 80% !important;
