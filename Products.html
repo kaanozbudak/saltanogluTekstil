@@ -10,6 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
     <div class="container" id="navbarContainer">
@@ -32,13 +33,54 @@
             </div>
         </nav>
     </div>
+
     <div class="container" id="containerBody">
-        <h3>Inverted Navbar</h3>
-        <p>An inverted navbar is black instead of gray.</p>
+        <div v-for="image in images"  id="itemImage" class="col-sm-4">
+          <h5 style="text-align:center">{{image.name}}</h5>
+          <img v-bind:src="image.url" alt="scarf" height="280px" width="280px">
+          <br><br><br>
+        </div>
     </div>
 
   <div>
       <footer class="footer"></footer>
   </div>
+  <script>
+  var app = new Vue({
+    el: '#containerBody',
+    data: {
+      images:
+      [
+        {
+          name: 'Scarf 1',
+          url: 'img/img01.jpg'
+        },
+        {
+          name: 'Scarf 2',
+          url: 'img/img02.jpg'
+        },
+        {
+          name: 'Scarf 3',
+          url: 'img/img03.jpg'
+        },
+        {
+          name: 'Scarf 4',
+          url: 'img/img04.jpg'
+        },
+        {
+          name: 'Scarf 5',
+          url: 'img/img05.jpg'
+        },
+        {
+          name: 'Scarf 6',
+          url: 'img/img06.jpg'
+        },
+      ]
+    },
+    methods: {
+
+    }
+  })
+  </script>
 </body>
 </html>
