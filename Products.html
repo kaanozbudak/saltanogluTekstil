@@ -24,8 +24,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" id="ulNavbar">
                         <li><a href="index2.html">Anasayfa</a></li>
-                        <li><a href="Contact.html">İletişim<span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="Products.html">Ürünler</a></li>
+                        <li><a href="Contact.html">Hakkımızda</a></li>
+                        <li class="active"><a href="Products.html">Üretim</a></li>
                         <li><a href="#" class="fa fa-facebook"></a></li>
                         <li><a href="#" class="fa fa-twitter"></a></li>
                         <li><a href="#" class="fa fa-instagram"></a></li>
@@ -35,7 +35,7 @@
         </nav>
     </div>
 
-    <div class="container" id="containerBody">
+    <div class="container" id="containerBody" style="margin-top: 10%;">
         <div v-for="image in images"  id="itemImage" class="col-sm-4">
           <h5 style="text-align:center">{{image.name}}</h5>
           <img v-bind:src="image.url" alt="scarf" height="280px" width="280px">
