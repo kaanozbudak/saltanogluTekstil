@@ -1,3 +1,6 @@
+p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
 #navbarDefault{
     position: absolute;
     width:80%;
@@ -11,16 +14,9 @@
 #navbarHeader{
     margin-left: 5%;
 }
-.footer{
-    position: relative;
-    bottom: 0;
-    margin-top: 0%;
-    width:100%;
-    height:60px;
-    background:rgb(0, 0, 0);
-}
 #carouselDiv{
     width: 100%;
+    margin-bottom: 2px;
 }
 .boxes{
     margin-top: 1%;
@@ -55,26 +51,45 @@ body{
     color: white;
     width: 45px !important;
   }
-
-
-  .zoom {
-    transition: transform .2s;
-    margin: 0 auto;
-}
-.zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-
-#bottomLinks{
-    background: rgb(0, 0, 0);
-    width: 100%;
-    height: 20em;
-}
-.linkSide{
-    border: 1px solid rgb(0, 0, 0); 
-    height: 100%;
+.longBanner{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    position:relative;
+	width:100%;
+	height:300px;
+    background:url('img/longBanner.png') repeat-x top center;
+    color: white;
 }
 
+ .longBanner > div:nth-child(1) {
+    position:relative;
+    width:100%;
+    height:300px;
+} .longBanner > div:nth-child(1) > div:nth-child(1) {
+    position:relative;
+    width:1200px;
+    height:300px;
+    margin:auto;
+    
+} .longBanner .txt.a {
+    display:block;
+    padding:60px 0 0 0;
+    font-size:40px;
+    letter-spacing:-2px;
+    color:#FFF;
+    
+} .longBanner .txt.a img {
+    margin:-7px 10px 0 0;
+    vertical-align:middle;
+    
+} .longBanner .txt.b {
+    display:block;
+    width:48%;
+    padding:14px 0 0 0;
+    font-size:15px;
+    line-height:1.5em;
+    color:rgba(255,255,255,0.75);
+}
 .hovereffect {
     width: 100%;
     height: 100%;
@@ -86,7 +101,6 @@ body{
     background: -webkit-linear-gradient(45deg, #ff89e9 0%, #05abe0 100%);
     background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
   }
-  
   .hovereffect .overlay {
     width: 100%;
     height: 100%;
@@ -97,7 +111,6 @@ body{
     padding: 3em;
     text-align: left;
   }
-  
   .hovereffect img {
     display: block;
     position: relative;
@@ -107,6 +120,7 @@ body{
     transition: opacity 0.35s, transform 0.45s;
     -webkit-transform: translate3d(-40px,0,0);
     transform: translate3d(-40px,0,0);
+    
   }
   
   .hovereffect h2 {
@@ -117,6 +131,7 @@ body{
     background-color: transparent;
     padding: 15% 0 10px 0;
     text-align: left;
+    
   }
   
   .hovereffect .overlay:before {
@@ -133,6 +148,7 @@ body{
     transition: opacity 0.35s, transform 0.45s;
     -webkit-transform: translate3d(-20px,0,0);
     transform: translate3d(-20px,0,0);
+    
   }
   
   .hovereffect a, .hovereffect p {
@@ -150,6 +166,7 @@ body{
     filter: alpha(opacity=60);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    
   }
   
   .hovereffect:hover .overlay:before,
