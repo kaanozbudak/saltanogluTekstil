@@ -40,14 +40,13 @@
     </nav>
 </div>
 
-    <div class="container" id="containerBody" style="margin-top: 10%;">
-        <div v-for="image in images"  id="itemImage" class="col-sm-4">
-          <h5 style="text-align:center">{{image.name}}</h5>
-          <img v-bind:src="image.url" alt="scarf" height="280px" width="280px">
-          <br><br><br>
-        </div>
+<div class="container" id="containerBody" style="margin-top: 10%;">
+    <div v-for="image in images"  id="itemImage" class="col-sm-4">
+      <h5 style="text-align:center">{{image.name}}</h5>
+      <img v-bind:src="image.url" alt="scarf" height="280px" width="280px">
+      <br><br><br>
     </div>
-
+</div>
 
 <div class="navbar navbar-inverse navbar-fixed-left" style="background: #080808c0;">
     <a class="navbar-brand" href="#">Brand</a>
