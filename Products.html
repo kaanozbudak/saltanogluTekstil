@@ -18,7 +18,7 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body>
+<body style="background: #75808a;">
   <div class="container" id="navbarContainer">
     <nav class="navbar navbar-inverse" id="navbarDefault">
         <div class="container-fluid">
@@ -37,6 +37,7 @@
         </div>
     </nav>
 </div>
+<!--
     <div class="container" id="containerBody" style="margin-top: 10%;">
         <div v-for="image in images"  id="itemImage" class="col-sm-4">
           <h5 style="text-align:center">{{image.name}}</h5>
@@ -44,11 +45,64 @@
           <br><br><br>
         </div>
     </div>
+-->
 
-  <div>
-      <footer class="footer"></footer>
+<div class="navbar navbar-inverse navbar-fixed-left" style="background: #080808c0;">
+    <a class="navbar-brand" href="#">Brand</a>
+    <ul class="nav navbar-nav">
+     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+       <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Sub Menu1</a></li>
+        <li><a href="#">Sub Menu2</a></li>
+        <li><a href="#">Sub Menu3</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Sub Menu4</a></li>
+        <li><a href="#">Sub Menu5</a></li>
+       </ul>
+     </li>
+     <li><a href="#">Link2</a></li>
+     <li><a href="#">Link3</a></li>
+     <li><a href="#">Link4</a></li>
+     <li><a href="#">Link5</a></li>
+    </ul>
   </div>
-  <script>
+  <div class="container">
+   <div class="row" style="margin-top: 15%;">
+     <h2>Left side Navigation bar (Fixed)</h2>
+     
+     <p>Left side Navigation</p>
+   </div>
+  </div>
+  <!-- ------------------------------------------------------------- -->
+<!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="#">Saltanoglu Tekstil</a></u></p>
+					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+	<!-- ./Footer -->
+</body>
+<script>
   var app = new Vue({
     el: '#containerBody',
     data: {
@@ -85,34 +139,4 @@
     }
   })
   </script>
-
-  <!-- ------------------------------------------------------------- -->
-<!-- Footer -->
-	<section id="footer">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p><u><a href="#">Saltanoglu Tekstil</a></u></p>
-					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>
-				</div>
-				</hr>
-			</div>	
-		</div>
-	</section>
-	<!-- ./Footer -->
-</body>
 </html>
