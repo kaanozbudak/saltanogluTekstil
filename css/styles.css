@@ -1,22 +1,35 @@
-.navbar-wrapper {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 20;
-}
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-	padding-right: 0;
-	padding-left: 0;
-}
-.navbar-wrapper .navbar {
-	padding-right: 15px;
-	padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-	width: auto;
-}
+
+.navbar-toggle {
+	border: none;
+	background: transparent !important;
+  }
+  .navbar-toggle:hover {
+	background: transparent !important;
+  }
+  .navbar-toggle .icon-bar {
+	width: 22px;
+	transition: all 0.2s;
+  }
+  .navbar-toggle .top-bar {
+	transform: rotate(45deg);
+	transform-origin: 10% 10%;
+  }
+  .navbar-toggle .middle-bar {
+	opacity: 0;
+  }
+  .navbar-toggle .bottom-bar {
+	transform: rotate(-45deg);
+	transform-origin: 10% 90%;
+  }
+  .navbar-toggle.collapsed .top-bar {
+	transform: rotate(0);
+  }
+  .navbar-toggle.collapsed .middle-bar {
+	opacity: 0.2;
+  }
+  .navbar-toggle.collapsed .bottom-bar {
+	transform: rotate(0);
+  }
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
@@ -91,9 +104,4 @@ section .section-title {
     padding-bottom: 0px;
     margin-bottom: 10px;
 }
-}
-.cells{
-    -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.75);
 }
