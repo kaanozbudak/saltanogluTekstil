@@ -251,7 +251,7 @@
                 </div>
 
                 <div class="container-contact1-form-btn">
-                    <button class="btn contact1-form-btn">
+                    <button type="submit" class="btn contact1-form-btn">
                         <span>
                             Mail'i Gönder
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
@@ -323,7 +323,7 @@
         
                 $.ajax({
                     type: "POST",
-                    url: 'php/handler.php',
+                    url: 'handler.php',
                     data: $form.serialize(),
                     success: after_form_submitted,
                     dataType: 'json'
