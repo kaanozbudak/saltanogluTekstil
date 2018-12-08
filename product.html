@@ -55,8 +55,8 @@
 
     <div class="container" id="containerBody" style="margin-top: 15%;">
             <div v-for="image in images"  id="itemImage" class="col-sm-4">
-              <h5 style="text-align:center">{{image.name}}</h5>
-              <img v-bind:src="image.url" alt="scarf" height="280px" width="280px">
+              <h5 style="text-align:center"></h5>
+              <img v-bind:src="image" v-bind:alt="image" height="200px" width="300px">
               <br><br><br>
             </div>
         </div>
@@ -96,37 +96,18 @@
 <script>
   var app = new Vue({
     el: '#containerBody',
+    mounted:function(){
+        this.imgTaker()
+    },
     data: {
-      images:
-      [
-        {
-          name: 'Scarf 1',
-          url: 'img/img01.jpg'
-        },
-        {
-          name: 'Scarf 2',
-          url: 'img/img02.jpg'
-        },
-        {
-          name: 'Scarf 3',
-          url: 'img/img03.jpg'
-        },
-        {
-          name: 'Scarf 4',
-          url: 'img/img04.jpg'
-        },
-        {
-          name: 'Scarf 5',
-          url: 'img/img05.jpg'
-        },
-        {
-          name: 'Scarf 6',
-          url: 'img/img06.jpg'
-        },
-      ]
+      images:[]
     },
     methods: {
-
+        imgTaker:function(){
+            for(var i=1;i<=35;i++){
+                this.images.push('img/mak/'+i+'.jpeg');
+            }
+        }
     }
   })
   </script>
