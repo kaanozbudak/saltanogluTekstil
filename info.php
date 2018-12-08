@@ -49,7 +49,7 @@
                             <a href="product.html">Üretim</a>
                         </li>
                         <li>
-                            <a href="info.html">Hakkımızda</a>
+                            <a href="info.php">Hakkımızda</a>
                         </li>
                         <li>
                             <a href="#contact">Bize Yazın</a>
@@ -224,8 +224,48 @@
             <div class="contact1-pic js-tilt" data-tilt>
                 <img src="img/mektup.png" alt="IMG">
             </div>
+            <?php
 
-            <form class="contact1-form validate-form">
+            if ( $_POST ){
+            
+                $name = htmlspecialchars(trim($_POST['name']));
+                $email = htmlspecialchars(trim($_POST['email']));
+                $message = htmlspecialchars(trim($_POST['message']));
+                $subject = htmlspecialchars(trim($_POST['subject']));
+            
+                include 'class.phpmailer.php';
+                $mail = new PHPMailer();
+                $mail->IsSMTP();
+                $mail->SMTPAuth = true;
+                $mail->Host = 'mail.saltanoglutekstil.com';
+                $mail->Port = 587;
+                $mail->SMTPSecure = 'tls';
+                $mail->Username = 'info@saltanoglutekstil.com';
+                $mail->Password = 'Rosekaan1';
+                $mail->SetFrom($mail->Username, $name);
+                $mail->AddAddress('info@saltanoglutekstil.com', $name);
+                $mail->CharSet = 'UTF-8';
+                $mail->Subject = ($subject);
+                $content = '<div style="background: #eee; padding: 10px; font-size: 14px">'.$message.'</div>';
+                $mail->MsgHTML($content);
+                if($mail->Send()) {
+                    // e-posta başarılı ile gönderildi
+                    echo '<div id="success_message" style="width:100%; height:100%;">
+                    <h2>Teşekkür ederiz, mesajınız alındı.</h2>
+                </div>';
+                } else {
+                    // bir sorun var, sorunu ekrana bastıralım
+                    echo '<div class="error">'.$mail->ErrorInfo.'</div> 
+                    <h4 style="color:red;">Error</h4>
+                    <div>
+                        Özür dileriz, mesaj gönderim başarısız.
+                    </div>';
+                }
+            
+            }
+	
+            ?>
+            <form class="contact1-form validate-form" method="post" action="">
                 <span class="contact1-form-title">
                     Bize Yazın
                 </span>
@@ -258,88 +298,16 @@
                         </span>
                     </button>
                 </div>
-            </form>
-            <div id="error_message" style="width:100%; height:100%; display:none; ">
-                    <h4 style="color:red;">Error</h4>
-                        Özür dileriz, mesaj gönderim başarısız.
-                    </div>
-                    <div id="success_message" style="width:100%; height:100%; display:none; ">
-                        <h2>Teşekkür ederiz, mesajınız alındı.</h2>
-                    </div>
+            </form>        
         </div>
     </div>
-    <script>
-        $(function()
-        {
-            function after_form_submitted(data)
-            {
-                if(data.result == 'success')
-                {
-                    $('form#reused_form').hide();
-                    $('#success_message').show();
-                    $('#error_message').hide();
-                }
-                else
-                {
-                    $('#error_message').append('<ul></ul>');
-        
-                    jQuery.each(data.errors,function(key,val)
-                    {
-                        $('#error_message ul').append('<li>'+key+':'+val+'</li>');
-                    });
-                    $('#success_message').hide();
-                    $('#error_message').show();
-        
-                    //reverse the response on the button
-                    $('button[type="button"]', $form).each(function()
-                    {
-                        $btn = $(this);
-                        label = $btn.prop('orig_label');
-                        if(label)
-                        {
-                            $btn.prop('type','submit' );
-                            $btn.text(label);
-                            $btn.prop('orig_label','');
-                        }
-                    });
-        
-                }//else
-            }
-        
-            $('#reused_form').submit(function(e)
-              {
-                e.preventDefault();
-        
-                $form = $(this);
-                //show some response on the button
-                $('button[type="submit"]', $form).each(function()
-                {
-                    $btn = $(this);
-                    $btn.prop('type','button' );
-                    $btn.prop('orig_label',$btn.text());
-                    $btn.text('Sending ...');
-                });
-        
-        
-                $.ajax({
-                    type: "POST",
-                    url: 'handler.php',
-                    data: $form.serialize(),
-                    success: after_form_submitted,
-                    dataType: 'json'
-                }); 
-        
-              });
-        });
-        </script>
-
+ 
     <script src="js/jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
             scale: 1.3
         })
     </script>
-
 
     <!-- End BANNER -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
