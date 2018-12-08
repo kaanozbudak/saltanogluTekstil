@@ -16,7 +16,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <style>
+        .mapouter{text-align:right;height:500px;width:100%;}
+        .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}
+    </style>
+     
 </head>
 
 <body style="background: rgb(233, 233, 233);">
@@ -68,7 +72,7 @@
                 <br>
                 0224 341 32 62
                 <br>
-                saltanoğlutekstil
+                Saltanoğlu Tekstil
             </p>
             <p>
                 <a href="#contact" id="bottom" class="btn btn-default my-2">Bize
@@ -79,7 +83,16 @@
 
     <div class="album py-5 bg-light">
         <div class="container">
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=saltanoglu%20tekstil%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBURSA&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                </div>
+                
+            </div>
+   
 
+         <!--   
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
@@ -201,14 +214,15 @@
                     </div>
                 </div>
             </div>
+        -->
         </div>
     </div>
 
-
+    
     <div id="contact" class="contact1" style="margin-bottom: 1%;">
         <div class="container-contact1">
             <div class="contact1-pic js-tilt" data-tilt>
-                <img src="img/img-01.png" alt="IMG">
+                <img src="img/mektup.png" alt="IMG">
             </div>
 
             <form class="contact1-form validate-form">
@@ -217,36 +231,107 @@
                 </span>
 
                 <div class="wrap-input1 validate-input" data-validate="Name is required">
-                    <input class="input1" type="text" name="name" placeholder="Name">
+                    <input class="input1" type="text" name="name" placeholder="Name" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input1" type="text" name="email" placeholder="Email">
+                    <input class="input1" type="text" name="email" placeholder="Email" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Subject is required">
-                    <input class="input1" type="text" name="subject" placeholder="Subject">
+                    <input class="input1" type="text" name="subject" placeholder="Subject" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Message is required">
-                    <textarea class="input1" name="message" placeholder="Message"></textarea>
+                    <textarea class="input1" name="message" maxlength="5000" placeholder="Message" required></textarea>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="container-contact1-form-btn">
-                    <button class="contact1-form-btn">
+                    <button class="btn contact1-form-btn">
                         <span>
                             Mail'i Gönder
                             <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </span>`
+                        </span>
                     </button>
                 </div>
             </form>
+            <div id="error_message" style="width:100%; height:100%; display:none; ">
+                    <h4 style="color:red;">Error</h4>
+                        Özür dileriz, mesaj gönderim başarısız.
+                    </div>
+                    <div id="success_message" style="width:100%; height:100%; display:none; ">
+                        <h2>Teşekkür ederiz, mesajınız alındı.</h2>
+                    </div>
         </div>
     </div>
+    <script>
+        $(function()
+        {
+            function after_form_submitted(data)
+            {
+                if(data.result == 'success')
+                {
+                    $('form#reused_form').hide();
+                    $('#success_message').show();
+                    $('#error_message').hide();
+                }
+                else
+                {
+                    $('#error_message').append('<ul></ul>');
+        
+                    jQuery.each(data.errors,function(key,val)
+                    {
+                        $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+                    });
+                    $('#success_message').hide();
+                    $('#error_message').show();
+        
+                    //reverse the response on the button
+                    $('button[type="button"]', $form).each(function()
+                    {
+                        $btn = $(this);
+                        label = $btn.prop('orig_label');
+                        if(label)
+                        {
+                            $btn.prop('type','submit' );
+                            $btn.text(label);
+                            $btn.prop('orig_label','');
+                        }
+                    });
+        
+                }//else
+            }
+        
+            $('#reused_form').submit(function(e)
+              {
+                e.preventDefault();
+        
+                $form = $(this);
+                //show some response on the button
+                $('button[type="submit"]', $form).each(function()
+                {
+                    $btn = $(this);
+                    $btn.prop('type','button' );
+                    $btn.prop('orig_label',$btn.text());
+                    $btn.text('Sending ...');
+                });
+        
+        
+                            $.ajax({
+                        type: "POST",
+                        url: 'handler.php',
+                        data: $form.serialize(),
+                        success: after_form_submitted,
+                        dataType: 'json'
+                    });
+        
+              });
+        });
+        </script>
 
     <script src="js/jquery.min.js"></script>
     <script>
@@ -281,7 +366,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
                     <p><u><a href="#" style="color: whitesmoke;">Saltanoglu Tekstil</a></u></p>
-                    <p class="h6" style="color: whitesmoke;">&copy2018 All right Reversed.</p>
+                    <p class="h6" style="color: whitesmoke;">&copy2019 All right Reversed.</p>
                 </div>
                 </hr>
             </div>
@@ -289,5 +374,4 @@
     </section>
     <!-- ./Footer -->
 </body>
-
 </html>
