@@ -240,10 +240,10 @@
                 $mail->Host = 'mail.saltanoglutekstil.com';
                 $mail->Port = 587;
                 $mail->SMTPSecure = 'tls';
-                $mail->Username = 'info@saltanoglutekstil.com';
-                $mail->Password = 'Rosekaan1';
+                $mail->Username = ($email);
+                //$mail->Password = 'EPOSTA_ŞİFRESİ';
                 $mail->SetFrom($mail->Username, $name);
-                $mail->AddAddress('info@saltanoglutekstil.com', $name);
+                $mail->AddAddress('info@saltanoglutekstil.com', 'HS Saltanoglu');
                 $mail->CharSet = 'UTF-8';
                 $mail->Subject = ($subject);
                 $content = '<div style="background: #eee; padding: 10px; font-size: 14px">'.$message.'</div>';
