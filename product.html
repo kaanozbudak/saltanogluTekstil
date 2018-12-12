@@ -53,10 +53,10 @@
         </nav>
     </div>
 
-    <div class="container" id="containerBody" style="margin-top: 15%;">
+    <div class="container" id="containerBody" style="margin-top: 3%; text-align: center;">
             <div v-for="i in images"  id="itemImage" class="col-sm-4">
               <h5 style="text-align:center"></h5>
-              <img v-bind:src="i" v-bind:alt="i" height="200px" width="300px">
+              <img v-bind:src="i" v-bind:alt="i" height="200px" width="300px" id="img" style="box-shadow: 0 0 10px black;">
               <br><br><br>
             </div>
         </div>
@@ -111,4 +111,11 @@
     }
   })
   </script>
+  <style>
+    #img:hover{
+        box-shadow: 0 0 40px white !important;
+        transform: scale(1.5);
+        transition: transform 1.4s;
+    }
+  </style>
 </html>
