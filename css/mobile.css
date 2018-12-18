@@ -1,0 +1,45 @@
+@media only screen and (max-width: 768px) {
+    .carouselP{
+        font-size: 12px !important;
+    }
+    .cellP{
+        font-size: 80% !important;
+    }
+    .col-lg-6{
+        width: 50%;
+        float: left;
+    }
+    .jumboP{
+        font-size: 160% !important;
+    }
+    #navheight{
+        margin-bottom: 5% !important;
+        margin-top: 5% !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+    #logo{
+        margin-left: 15%;
+    }
+    .navbar-toggle{
+        background: rgb(219, 235, 255);
+    }
+    .navbar-toggle:hover{
+        background: rgb(219, 235, 255);
+    }
+    .navbar-toggle::selection{
+        background: rgb(219, 235, 255);
+    }
+    #myCarousel{
+        height: 30em !important;
+    }
+    .slider{
+        height: 30em !important;
+    }
+    footer{
+    }
+}

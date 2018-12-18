@@ -12,24 +12,19 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
     <title>HS Saltanoglu</title>
-    <link href="css/styles.css" />
-    <link href="css/main.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
 </head>
 <style>
     .selected{
         font-style: italic;
     }
-    @media only screen and (max-width: 768px) {
-        .carouselP{
-            font-size: 12px;
-        }
-    }
 </style>
 
 <body style="background: rgb(219, 235, 255); overflow-x: hidden !important;">
-
     <div class="container-fluid">
-        <nav class="navbar navbar-default navbar-relative-top" role="navigation" style="margin-top: 2%;
+        <nav class="navbar navbar-default navbar-relative-top" id="navheight" role="navigation" style="margin-top: 2%;
             background: rgb(219, 235, 255); box-shadow: 0 0 0px; font-size: 19px; margin-bottom: 2%;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +35,7 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a href="index.html"><img src="img/logo.png" alt="SaltanogluTekstilLogo"></a>
+                    <a id="logo" href="index.html"><img src="img/logo.png" alt="SaltanogluTekstilLogo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 2%;">
@@ -75,17 +70,18 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img class="first-slide" src="img/slider2.jpg" width="100%;" alt="1" />
+                <img class="first-slide slider" src="img/slider2.jpg" width="100%;" alt="1" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>SALTANOĞLU TEKSTİL</h1>
-                        <p class="carouselP">Bursa'nın Yıldırım ilçesinden dünyaya açılan kapılarımız sektörde sizlerle buluşmaya devam
+                        <p class="carouselP">Bursa'nın Yıldırım ilçesinden dünyaya açılan kapılarımız sektörde sizlerle
+                            buluşmaya devam
                             ediyor.</p>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img class="second-slide" src="img/slider1.jpg" width="100%;" alt="2" />
+                <img class="second-slide slider" src="img/slider1.jpg" width="100%;" alt="2" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>HS SALTANOĞLU</h1>
@@ -121,7 +117,7 @@
         <div class="container">
             <h1 class="jumbotron-heading" style=" font-size: 4em; overflow: hidden; color: whitesmoke; margin-top: 5%;">Saltanoğlu
                 Tekstil</h1>
-            <p style="color: white; margin-top: 10%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">1992
+            <p class="jumboP" style="color: white; margin-top: 10%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">1992
                 yılından günümüze kadar edindiği
                 tecrübelerle müşteri memnuniyetini ve kaliteyi esas alan
                 <b>Saltanoğlu Tekstil</b>, bayan giyim, jakarlı gömlek, fonluk perde, şal-eşarp, yatak örtüsü gibi
@@ -133,7 +129,8 @@
     </section>
 
     <div class="col-lg-6" style="height: 500px;  background-color: #0C273C; z-index: 0;">
-        <p style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar edindiği
+        <p class="cellP" style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar
+            edindiği
             tecrübelerle müşteri memnuniyetini ve kaliteyi esas alan
             <b>Saltanoğlu Tekstil</b>, bayan giyim, jakarlı gömlek, fonluk perde, şal-eşarp, yatak örtüsü gibi
             geniş
@@ -145,7 +142,8 @@
     <div class="col-lg-6" style="z-index: 1; box-shadow: 20px 0 20em 0px black; height: 500px; background-image: url('img/mak/28.jpeg'); background-size: cover;"></div>
     <div class="col-lg-6" style="z-index: 1; box-shadow: 20px 0 20em 0px black; height: 500px; background-image: url('img/mak/20.jpeg'); background-size: cover;"></div>
     <div id="bdivs" class="col-lg-6" style="height: 500px;  background-color: rgb(170, 170, 170); z-index: 0;">
-        <p style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar edindiği tecrübelerle
+        <p class="cellP" style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar
+            edindiği tecrübelerle
             müşteri memnuniyetini ve kaliteyi esas alan
             <b>Saltanoğlu Tekstil</b>, bayan giyim, jakarlı gömlek, fonluk perde, şal-eşarp, yatak örtüsü gibi
             geniş
@@ -154,7 +152,8 @@
             tercih sebebi olan firma, genç ve tecrübeli kadrosuyla sektörde yer edinmektedir.
     </div>
     <div class="col-lg-6" style="height: 500px;  background-color: #0C273C; z-index: 0;">
-        <p style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar edindiği
+        <p class="cellP" style="padding: 20%; color: whitesmoke; font-size: 17px;">1992 yılından günümüze kadar
+            edindiği
             tecrübelerle müşteri memnuniyetini ve kaliteyi esas alan
             <b>Saltanoğlu Tekstil</b>, bayan giyim, jakarlı gömlek, fonluk perde, şal-eşarp, yatak örtüsü gibi
             geniş
@@ -171,7 +170,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!-- Footer -->
-    <section id="footer" style="background: rgb(190, 212, 236); z-index: 20 !important;">
+    <section id="footer" style="background: rgb(190, 212, 236) !important; z-index: 20 !important;">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-top: 1%;">
             </div>
