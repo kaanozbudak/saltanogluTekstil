@@ -19,15 +19,16 @@
     <style>
         .mapouter{text-align:right;height:500px;width:100%;}
         .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}
+        .selected{font-style: italic;}
     </style>
 
 </head>
 
-<body style="background: rgb(233, 233, 233);">
+<body style="background: rgb(219, 235, 255);">
 
     <div class="container-fluid">
         <nav class="navbar navbar-default navbar-relative-top" role="navigation" style="margin-top: 2%;
-        background: rgb(233, 233, 233); box-shadow: 0 0 0px; font-size: 19px; margin-bottom: 2%;">
+        background: rgb(219, 235, 255); box-shadow: 0 0 0px; font-size: 19px; margin-bottom: 2%;">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -52,7 +53,7 @@
                             <a href="about.html">Hakkımızda</a>
                         </li>
                         <li>
-                            <a href="info.php">İletişim</a>
+                            <a class="selected" href="info.php">İletişim</a>
                         </li>
                         <li>
                             <a href="#contact">Bize Yazın</a>

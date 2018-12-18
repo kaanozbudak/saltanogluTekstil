@@ -29,6 +29,10 @@
   .navbar-toggle.collapsed .bottom-bar {
 	transform: rotate(0);
   }
+
+
+
+
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
@@ -146,5 +150,4 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
 
