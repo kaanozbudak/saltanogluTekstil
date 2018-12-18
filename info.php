@@ -20,7 +20,7 @@
         .mapouter{text-align:right;height:500px;width:100%;}
         .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}
     </style>
-     
+
 </head>
 
 <body style="background: rgb(233, 233, 233);">
@@ -37,7 +37,7 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Saltanoglu Tekstil</a>
+                    <a href="index.html"><img src="img/logo.png" alt="SaltanogluTekstilLogo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,7 +49,10 @@
                             <a href="product.html">Üretim</a>
                         </li>
                         <li>
-                            <a href="info.php">Hakkımızda</a>
+                            <a href="about.html">Hakkımızda</a>
+                        </li>
+                        <li>
+                            <a href="info.php">İletişim</a>
                         </li>
                         <li>
                             <a href="#contact">Bize Yazın</a>
@@ -67,12 +70,23 @@
         <div class="container">
             <h1 class="jumbotron-heading">İletişim</h1>
             <p class="lead text-muted">
-                Otosansit sanayi bölgesi (Yiğitler mahallesi), 5.blok, No:164 16300
-                Yıldırım/BURSA
-                <br>
-                0224 341 32 62
-                <br>
-                Saltanoğlu Tekstil
+                <b>
+                    Otosansit sanayi bölgesi (Yiğitler mahallesi), 5.blok, No:164 16300
+                    Yıldırım/BURSA
+                    <br>
+                    <br>
+                    0224 341 32 62
+                    <br>
+                    <br>
+                    +90 534 796 58 50
+                    <br>
+                    <br>
+                    <h3>wwww.saltanoglutekstil.com</h3>
+                    <br>
+                    <br>
+                    <h3>info@saltanoglutekstil.com</h3>
+                    Saltanoğlu Tekstil
+                </b>
             </p>
             <p>
                 <a href="#contact" id="bottom" class="btn btn-default my-2">Bize
@@ -85,14 +99,15 @@
         <div class="container">
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=saltanoglu%20tekstil%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBURSA&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=saltanoglu%20tekstil%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBURSA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                     </iframe>
                 </div>
-                
-            </div>
-   
 
-         <!--   
+            </div>
+
+
+            <!--   
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
@@ -218,7 +233,7 @@
         </div>
     </div>
 
-    
+
     <div id="contact" class="contact1" style="margin-bottom: 1%;">
         <div class="container-contact1">
             <div class="contact1-pic js-tilt" data-tilt>
@@ -298,10 +313,10 @@
                         </span>
                     </button>
                 </div>
-            </form>        
+            </form>
         </div>
     </div>
- 
+
     <script src="js/jquery.min.js"></script>
     <script>
         $('.js-tilt').tilt({
@@ -342,4 +357,5 @@
     </section>
     <!-- ./Footer -->
 </body>
+
 </html>

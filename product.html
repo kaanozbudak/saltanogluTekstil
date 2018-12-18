@@ -17,7 +17,6 @@
 </head>
 
 <body style="background: rgb(233, 233, 233);">
-
     <div class="container-fluid">
         <nav class="navbar navbar-default navbar-relative-top" role="navigation" style="margin-top: 2%;
             background: rgb(233, 233, 233); box-shadow: 0 0 0px; font-size: 19px;">
@@ -30,7 +29,7 @@
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Saltanoglu Tekstil</a>
+                    <a href="index.html"><img src="img/logo.png" alt="SaltanogluTekstilLogo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,7 +41,10 @@
                             <a href="product.html">Üretim</a>
                         </li>
                         <li>
-                            <a href="info.php">Hakkımızda</a>
+                            <a href="about.html">Hakkımızda</a>
+                        </li>
+                        <li>
+                            <a href="info.php">İletişim</a>
                         </li>
                         <li>
                             <a href="info.php#contact">Bize Yazın</a>
@@ -53,69 +55,84 @@
         </nav>
     </div>
 
-    <div class="container" id="containerBody" style="margin-top: 3%; text-align: center;">
-            <div v-for="i in images"  id="itemImage" class="col-sm-4">
-              <h5 style="text-align:center"></h5>
-              <img v-bind:src="i" v-bind:alt="i" height="200px" width="300px" id="img" style="box-shadow: 0 0 10px black;">
-              <br><br><br>
-            </div>
+    <div class="container" style="margin-top: 3%; text-align: center;" id="containerBody">
+        <div v-for="i in images" id="itemImage" class="col-sm-4">
+            <h5 style="text-align:center"></h5>
+            <img v-bind:src="i" v-bind:alt="i" height="200px" width="300px" id="img" style="box-shadow: 0 0 10px black;">
+            <br><br><br>
         </div>
-
+    </div>
+    <!--
+        listItem 1 2 3 4 5 6 7 will be in slide on product html
+        you can find these pictures in img/mak/listItem1-2-3-4-5-6-7-8
+        every picture will have same message as like 
+        750 mt karelik alan üzerine kurulmuş tesisimiz 340 cm eninde 6 adet Leonardo Silver model jakarlı
+        dokuma makineleriyle Bursa’da hizmet vermektedir. Staubli JC5 jakar sistemleriyle modernize edilmiş
+        makine parkuru aylık 50000 metre kumaş dokuma kapasitesine sahiptir.
+        7 pictures turn each other,
+        when you create slider you can remove up side which has id containerBody
+    -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- Footer -->
-<section id="footer" style="background: rgb(58, 57, 57);">
-    <div class="container">
-        <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-top: 1%;">
-        </div>
-        <div class="row" style=" margin-top: 1% !important;">
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                <ul class="list-unstyled list-inline social text-center">
-                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                </ul>
+    <!-- Footer -->
+    <section id="footer" style="background: rgb(58, 57, 57);">
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-top: 1%;">
             </div>
-            </hr>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p><u><a href="#" style="color: whitesmoke;">Saltanoglu Tekstil</a></u></p>
-                <p class="h6" style="color: whitesmoke;">&copy2019 All right Reversed.</p>
+            <div class="row" style=" margin-top: 1% !important;">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
             </div>
-            </hr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="#" style="color: whitesmoke;">Saltanoglu Tekstil</a></u></p>
+                    <p class="h6" style="color: whitesmoke;">&copy2019 All right Reversed.</p>
+                </div>
+                </hr>
+            </div>
         </div>
-    </div>
-</section>
-<!-- ./Footer -->
+    </section>
+    <!-- ./Footer -->
 </body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
-  var app = new Vue({
-    el: '#containerBody',
-    mounted:function(){
-        this.imgTaker()
-    },
-    data: {
-      images:[]
-    },
-    methods: {
-        imgTaker:function(){
-            for(var i=1;i<=35;i++){
-                this.images.push('img/mak/'+i+'.jpeg');
+    var app = new Vue({
+        el: '#containerBody',
+        mounted: function () {
+            this.imgTaker()
+        },
+        data: {
+            images: []
+        },
+        methods: {
+            imgTaker: function () {
+                for (var i = 1; i <= 7; i++) {
+                    this.images.push('img/mak/listItem' + i + '.jpeg ');
+                }
             }
         }
-    }
-  })
-  </script>
-  <style>
-    #img:hover{
+    })
+</script>
+
+<style>
+    #img:hover {
         box-shadow: 0 0 40px white !important;
         transform: scale(1.5);
         transition: transform 1.4s;
     }
-  </style>
+</style>
+
 </html>

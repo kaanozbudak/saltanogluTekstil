@@ -1,0 +1,16 @@
+ABOUT.HTML
+    dont worry about 'about.html' they will send information about that page.
+EVERY PAGE
+    add current href which selected i mean, for example if we are in index.html; <a href="index.html" current></a> was something like that
+Product html 
+    listItem 1 2 3 4 5 6 7 will be in slide on product html
+    you can find these pictures in img/mak/listItem1-2-3-4-5-6-7-8
+    every picture will have same message as like 
+       " 750 mt karelik alan üzerine kurulmuş tesisimiz 340 cm eninde 6 adet Leonardo Silver model jakarlı
+        dokuma makineleriyle Bursa’da hizmet vermektedir. Staubli JC5 jakar sistemleriyle modernize edilmiş
+        makine parkuru aylık 50000 metre kumaş dokuma kapasitesine sahiptir.  "
+    7 pictures turn each other,
+    when you create slider you can remove up side which has id containerBody
+
+For every page
+    we are not sure, can backgorund color be turquoise or light blue for every page
