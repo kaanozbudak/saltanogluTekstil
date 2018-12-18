@@ -331,7 +331,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Footer -->
-    <section id="footer" style="background: rgb(58, 57, 57);">
+    <section id="footer" style="background: rgb(190, 212, 236);">
         <div class="container">
             <div class="row text-center text-xs-center text-sm-left text-md-left" style="margin-top: 1%;">
             </div>
@@ -349,8 +349,8 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p><u><a href="#" style="color: whitesmoke;">Saltanoglu Tekstil</a></u></p>
-                    <p class="h6" style="color: whitesmoke;">&copy2019 All right Reversed.</p>
+                    <p><u><a href="#" style="color: black;">Saltanoglu Tekstil</a></u></p>
+                    <p class="h6" style="color: black;">&copy2019 All right Reversed.</p>
                 </div>
                 </hr>
             </div>
