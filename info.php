@@ -101,9 +101,7 @@
         <div class="container">
             <div class="mapouter">
                 <div class="gmap_canvas">
-                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=saltanoglu%20tekstil%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBURSA&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                    </iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.671929554411!2d29.167718515351186!3d40.19411397707231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca39861e9cdfdd%3A0x4a3a062648f19e8e!2sSaltano%C4%9Flu+Tekstil!5e0!3m2!1str!2str!4v1545815360957" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
 
             </div>
